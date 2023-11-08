@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* 기본 스타일 */
+body,
+body *,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Lora', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.phone {
+  border: 1px solid #000;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 393px;
+  height: 852px;
+  border-radius: 44px;
+  background-color: black;
+  padding: 10px 10px;
+}
+
+/* 헤더 */
+.iPhone-header {
+  height: 44px;
+  position: relative;
+  font-family: none;
+}
+
+.time {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 34px;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  right: 34px;
+}
+
+/* 메뉴바 */
+.menu {
+  height: 48px;
+  /* background-color: pink; */
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 5px 0;
+  column-gap: 10px;
+}
+
+.menu-bar li {
+  display: inline-block;
+  padding: 10px 5px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  
+  
+  & a {
+    color: #fff;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+}
+
+.menu-bar .is-selected {
+  background: #fff;
+
+  & a {
+    color: #000;
+  }
+}
+
+/* 컨텐츠 */
+.contents {
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-areas: 
+  "modern interface"
+  "graphic graphic"
+  "junior design"
+  "machine machine";
+  row-gap: 5px;
+  column-gap: 5px;
+  margin-top: 10px;
+  overflow-y: hidden;
+
+  & a {
+    border-radius: 25px;
+    width: 183px;
+    height: 183px;
+    padding: 15px;
+    font-size: 2.8rem;
+  }
+
+  & span {
+    color: #000;
+  }
+}
+
+.price {
+  border: 1px solid #000;
+  background-color: #fedd2d;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  height: 30px;
+  padding: 15px;
+  bottom: 15px;
+  left: 15px;
+  line-height: 1em;
+}
+
+.month {
+  border: 1px solid #000;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  line-height: 1em;
+  height: 30px;
+  padding: 15px 10px;
+  bottom: 15px;
+  right: 15px;
+  text-align: center;
+}
+
+.modern {
+  grid-area: modern;
+  background-color: rgb(39, 41, 43);
+  color: #fff;
+  border: 1px solid #fff;
+
+  & span {
+    color: #fff;
+  }
+  
+  & em {
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fff 63%, #777 27%);
+  margin-top: 2px;
+}
+
+.interface {
+  grid-area: interface;
+  background-color: #eee;
+  position: relative;
+}
+
+.graphic {
+  grid-area: graphic;
+  width: 371px !important;
+  position: relative;
+  background-color: rgb(247, 246, 193);
+}
+
+.graphic .price {
+  background-color: pink;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+.junior {
+  grid-area: junior;
+  background-color: rgb(195, 166, 209);
+  position: relative;
+}
+
+.design {
+  grid-area: design;
+  background-color: rgb(255, 196, 191);
+  position: relative;
+}
+
+.design .price {
+  background-color: pink;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+.machine {
+  grid-area: machine;
+  width: 371px !important;
+  height: 163px !important;
+  border-radius: 25px 25px 40px 40px !important;
+  background-color: skyblue;
+  position: relative;
+}
+
+.machine .price {
+  background-color: pink;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100; 
+  bottom: 5px;
+}
+
+.machine .month {
+  bottom: 5px;
+}
